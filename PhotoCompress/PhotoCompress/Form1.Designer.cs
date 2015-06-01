@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkRotate = new System.Windows.Forms.CheckBox();
+            this.btn_Begin = new System.Windows.Forms.Button();
+            this.chkPadding = new System.Windows.Forms.CheckBox();
+            this.chkDefault = new System.Windows.Forms.CheckBox();
+            this.btnViewForder = new System.Windows.Forms.Button();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.txtWidth = new System.Windows.Forms.TextBox();
             this.txtQuality = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtOutPutDir = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtWorkDir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Begin = new System.Windows.Forms.Button();
-            this.btnViewForder = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtOutPutDir = new System.Windows.Forms.TextBox();
-            this.chkDefault = new System.Windows.Forms.CheckBox();
-            this.chkPadding = new System.Windows.Forms.CheckBox();
-            this.chkRotate = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtxtLog = new System.Windows.Forms.RichTextBox();
+            this.btnViewOut = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.groupBox1.Controls.Add(this.btn_Begin);
             this.groupBox1.Controls.Add(this.chkPadding);
             this.groupBox1.Controls.Add(this.chkDefault);
+            this.groupBox1.Controls.Add(this.btnViewOut);
             this.groupBox1.Controls.Add(this.btnViewForder);
             this.groupBox1.Controls.Add(this.txtHeight);
             this.groupBox1.Controls.Add(this.txtWidth);
@@ -73,6 +75,62 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "配置区域";
+            // 
+            // chkRotate
+            // 
+            this.chkRotate.AutoSize = true;
+            this.chkRotate.Location = new System.Drawing.Point(251, 83);
+            this.chkRotate.Name = "chkRotate";
+            this.chkRotate.Size = new System.Drawing.Size(72, 16);
+            this.chkRotate.TabIndex = 5;
+            this.chkRotate.Text = "自动旋转";
+            this.chkRotate.UseVisualStyleBackColor = true;
+            // 
+            // btn_Begin
+            // 
+            this.btn_Begin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_Begin.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_Begin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_Begin.Location = new System.Drawing.Point(23, 150);
+            this.btn_Begin.Name = "btn_Begin";
+            this.btn_Begin.Size = new System.Drawing.Size(304, 35);
+            this.btn_Begin.TabIndex = 1;
+            this.btn_Begin.Text = "压缩";
+            this.btn_Begin.UseVisualStyleBackColor = false;
+            this.btn_Begin.Click += new System.EventHandler(this.btn_Begin_Click);
+            // 
+            // chkPadding
+            // 
+            this.chkPadding.AutoSize = true;
+            this.chkPadding.Location = new System.Drawing.Point(140, 83);
+            this.chkPadding.Name = "chkPadding";
+            this.chkPadding.Size = new System.Drawing.Size(72, 16);
+            this.chkPadding.TabIndex = 5;
+            this.chkPadding.Text = "自动填充";
+            this.chkPadding.UseVisualStyleBackColor = true;
+            // 
+            // chkDefault
+            // 
+            this.chkDefault.AutoSize = true;
+            this.chkDefault.Checked = true;
+            this.chkDefault.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDefault.Location = new System.Drawing.Point(299, 52);
+            this.chkDefault.Name = "chkDefault";
+            this.chkDefault.Size = new System.Drawing.Size(48, 16);
+            this.chkDefault.TabIndex = 4;
+            this.chkDefault.Text = "默认";
+            this.chkDefault.UseVisualStyleBackColor = true;
+            this.chkDefault.CheckedChanged += new System.EventHandler(this.chkDefault_CheckedChanged);
+            // 
+            // btnViewForder
+            // 
+            this.btnViewForder.Location = new System.Drawing.Point(251, 17);
+            this.btnViewForder.Name = "btnViewForder";
+            this.btnViewForder.Size = new System.Drawing.Size(44, 23);
+            this.btnViewForder.TabIndex = 3;
+            this.btnViewForder.Text = "选择";
+            this.btnViewForder.UseVisualStyleBackColor = true;
+            this.btnViewForder.Click += new System.EventHandler(this.btnViewForder_Click);
             // 
             // txtHeight
             // 
@@ -125,44 +183,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "输出质量";
             // 
-            // txtWorkDir
+            // txtOutPutDir
             // 
-            this.txtWorkDir.Location = new System.Drawing.Point(80, 19);
-            this.txtWorkDir.Name = "txtWorkDir";
-            this.txtWorkDir.Size = new System.Drawing.Size(193, 21);
-            this.txtWorkDir.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "工作目录";
-            // 
-            // btn_Begin
-            // 
-            this.btn_Begin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_Begin.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_Begin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_Begin.Location = new System.Drawing.Point(23, 150);
-            this.btn_Begin.Name = "btn_Begin";
-            this.btn_Begin.Size = new System.Drawing.Size(304, 35);
-            this.btn_Begin.TabIndex = 1;
-            this.btn_Begin.Text = "压缩";
-            this.btn_Begin.UseVisualStyleBackColor = false;
-            this.btn_Begin.Click += new System.EventHandler(this.btn_Begin_Click);
-            // 
-            // btnViewForder
-            // 
-            this.btnViewForder.Location = new System.Drawing.Point(279, 17);
-            this.btnViewForder.Name = "btnViewForder";
-            this.btnViewForder.Size = new System.Drawing.Size(44, 23);
-            this.btnViewForder.TabIndex = 3;
-            this.btnViewForder.Text = "选择";
-            this.btnViewForder.UseVisualStyleBackColor = true;
-            this.btnViewForder.Click += new System.EventHandler(this.btnViewForder_Click);
+            this.txtOutPutDir.Location = new System.Drawing.Point(80, 50);
+            this.txtOutPutDir.Name = "txtOutPutDir";
+            this.txtOutPutDir.Size = new System.Drawing.Size(164, 21);
+            this.txtOutPutDir.TabIndex = 1;
             // 
             // label7
             // 
@@ -173,44 +199,21 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "工作目录";
             // 
-            // txtOutPutDir
+            // txtWorkDir
             // 
-            this.txtOutPutDir.Location = new System.Drawing.Point(80, 50);
-            this.txtOutPutDir.Name = "txtOutPutDir";
-            this.txtOutPutDir.Size = new System.Drawing.Size(193, 21);
-            this.txtOutPutDir.TabIndex = 1;
+            this.txtWorkDir.Location = new System.Drawing.Point(80, 19);
+            this.txtWorkDir.Name = "txtWorkDir";
+            this.txtWorkDir.Size = new System.Drawing.Size(164, 21);
+            this.txtWorkDir.TabIndex = 1;
             // 
-            // chkDefault
+            // label1
             // 
-            this.chkDefault.AutoSize = true;
-            this.chkDefault.Checked = true;
-            this.chkDefault.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDefault.Location = new System.Drawing.Point(279, 52);
-            this.chkDefault.Name = "chkDefault";
-            this.chkDefault.Size = new System.Drawing.Size(48, 16);
-            this.chkDefault.TabIndex = 4;
-            this.chkDefault.Text = "默认";
-            this.chkDefault.UseVisualStyleBackColor = true;
-            // 
-            // chkPadding
-            // 
-            this.chkPadding.AutoSize = true;
-            this.chkPadding.Location = new System.Drawing.Point(140, 83);
-            this.chkPadding.Name = "chkPadding";
-            this.chkPadding.Size = new System.Drawing.Size(72, 16);
-            this.chkPadding.TabIndex = 5;
-            this.chkPadding.Text = "自动填充";
-            this.chkPadding.UseVisualStyleBackColor = true;
-            // 
-            // chkRotate
-            // 
-            this.chkRotate.AutoSize = true;
-            this.chkRotate.Location = new System.Drawing.Point(251, 83);
-            this.chkRotate.Name = "chkRotate";
-            this.chkRotate.Size = new System.Drawing.Size(72, 16);
-            this.chkRotate.TabIndex = 5;
-            this.chkRotate.Text = "自动旋转";
-            this.chkRotate.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "工作目录";
             // 
             // groupBox2
             // 
@@ -232,6 +235,16 @@
             this.rtxtLog.Size = new System.Drawing.Size(349, 122);
             this.rtxtLog.TabIndex = 2;
             this.rtxtLog.Text = "";
+            // 
+            // btnViewOut
+            // 
+            this.btnViewOut.Location = new System.Drawing.Point(251, 48);
+            this.btnViewOut.Name = "btnViewOut";
+            this.btnViewOut.Size = new System.Drawing.Size(44, 23);
+            this.btnViewOut.TabIndex = 3;
+            this.btnViewOut.Text = "选择";
+            this.btnViewOut.UseVisualStyleBackColor = true;
+            this.btnViewOut.Click += new System.EventHandler(this.btnViewForder_Click);
             // 
             // frmMain
             // 
@@ -272,6 +285,7 @@
         private System.Windows.Forms.CheckBox chkPadding;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox rtxtLog;
+        private System.Windows.Forms.Button btnViewOut;
     }
 }
 

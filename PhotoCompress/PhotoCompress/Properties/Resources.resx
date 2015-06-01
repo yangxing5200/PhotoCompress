@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="frmMain_btn_Begin_Click_压缩中___" xml:space="preserve">
+    <value>压缩中...</value>
+  </data>
+  <data name="frmMain_btn_Begin_Click_" xml:space="preserve">
+    <value>请选择图片库路径！</value>
+  </data>
+  <data name="frmMain_btn_Begin_Click_output" xml:space="preserve">
+    <value>请选择输出路径！</value>
+  </data>
 </root>
