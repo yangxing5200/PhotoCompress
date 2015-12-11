@@ -34,6 +34,7 @@
             this.btn_Begin = new System.Windows.Forms.Button();
             this.chkPadding = new System.Windows.Forms.CheckBox();
             this.chkDefault = new System.Windows.Forms.CheckBox();
+            this.btnViewOut = new System.Windows.Forms.Button();
             this.btnViewForder = new System.Windows.Forms.Button();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.txtWidth = new System.Windows.Forms.TextBox();
@@ -47,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtxtLog = new System.Windows.Forms.RichTextBox();
-            this.btnViewOut = new System.Windows.Forms.Button();
+            this.chkResize = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             this.groupBox1.Controls.Add(this.chkRotate);
             this.groupBox1.Controls.Add(this.btn_Begin);
             this.groupBox1.Controls.Add(this.chkPadding);
+            this.groupBox1.Controls.Add(this.chkResize);
             this.groupBox1.Controls.Add(this.chkDefault);
             this.groupBox1.Controls.Add(this.btnViewOut);
             this.groupBox1.Controls.Add(this.btnViewForder);
@@ -123,6 +125,16 @@
             this.chkDefault.UseVisualStyleBackColor = true;
             this.chkDefault.CheckedChanged += new System.EventHandler(this.chkDefault_CheckedChanged);
             // 
+            // btnViewOut
+            // 
+            this.btnViewOut.Location = new System.Drawing.Point(251, 48);
+            this.btnViewOut.Name = "btnViewOut";
+            this.btnViewOut.Size = new System.Drawing.Size(44, 23);
+            this.btnViewOut.TabIndex = 3;
+            this.btnViewOut.Text = "选择";
+            this.btnViewOut.UseVisualStyleBackColor = true;
+            this.btnViewOut.Click += new System.EventHandler(this.btnViewForder_Click);
+            // 
             // btnViewForder
             // 
             this.btnViewForder.Location = new System.Drawing.Point(251, 17);
@@ -135,17 +147,17 @@
             // 
             // txtHeight
             // 
-            this.txtHeight.Location = new System.Drawing.Point(158, 112);
+            this.txtHeight.Location = new System.Drawing.Point(214, 111);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(31, 21);
+            this.txtHeight.Size = new System.Drawing.Size(48, 21);
             this.txtHeight.TabIndex = 1;
             this.txtHeight.Text = "768";
             // 
             // txtWidth
             // 
-            this.txtWidth.Location = new System.Drawing.Point(80, 112);
+            this.txtWidth.Location = new System.Drawing.Point(131, 111);
             this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(31, 21);
+            this.txtWidth.Size = new System.Drawing.Size(50, 21);
             this.txtWidth.TabIndex = 1;
             this.txtWidth.Text = "1024";
             // 
@@ -160,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 115);
+            this.label4.Location = new System.Drawing.Point(189, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 12);
             this.label4.TabIndex = 0;
@@ -169,7 +181,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 113);
+            this.label3.Location = new System.Drawing.Point(106, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 0;
@@ -237,15 +249,18 @@
             this.rtxtLog.TabIndex = 2;
             this.rtxtLog.Text = "";
             // 
-            // btnViewOut
+            // chkResize
             // 
-            this.btnViewOut.Location = new System.Drawing.Point(251, 48);
-            this.btnViewOut.Name = "btnViewOut";
-            this.btnViewOut.Size = new System.Drawing.Size(44, 23);
-            this.btnViewOut.TabIndex = 3;
-            this.btnViewOut.Text = "选择";
-            this.btnViewOut.UseVisualStyleBackColor = true;
-            this.btnViewOut.Click += new System.EventHandler(this.btnViewForder_Click);
+            this.chkResize.AutoSize = true;
+            this.chkResize.Checked = true;
+            this.chkResize.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkResize.Location = new System.Drawing.Point(50, 116);
+            this.chkResize.Name = "chkResize";
+            this.chkResize.Size = new System.Drawing.Size(72, 16);
+            this.chkResize.TabIndex = 4;
+            this.chkResize.Text = "修改尺寸";
+            this.chkResize.UseVisualStyleBackColor = true;
+            this.chkResize.CheckedChanged += new System.EventHandler(this.chkDefault_CheckedChanged);
             // 
             // frmMain
             // 
@@ -288,6 +303,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox rtxtLog;
         private System.Windows.Forms.Button btnViewOut;
+        private System.Windows.Forms.CheckBox chkResize;
     }
 }
 
